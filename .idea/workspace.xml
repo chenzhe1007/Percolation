@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f5a9bff-28e2-448b-a578-9dfc474491a5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PercolationStats.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Percolation.java" afterPath="$PROJECT_DIR$/src/Percolation.java" />
-    </list>
+    <list default="true" id="8f5a9bff-28e2-448b-a578-9dfc474491a5" name="Default" comment="" />
     <ignored path="Percolation.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
