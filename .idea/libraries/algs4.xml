@@ -1,0 +1,25 @@
+<component name="libraryTable">
+  <library name="algs4">
+    <CLASSES>
+      <root url="file://$USER_HOME$/algs4" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/algs4/Percolation" />
+      <root url="file://$USER_HOME$/algs4/checkstyle-6.1/contrib" />
+      <root url="file://$USER_HOME$/algs4/checkstyle-6.1/contrib/bcel/src/checkstyle" />
+      <root url="file://$USER_HOME$/algs4/checkstyle-6.1/contrib/bcel/src/testinputs" />
+      <root url="file://$USER_HOME$/algs4/checkstyle-6.1/contrib/bcel/src/tests" />
+      <root url="file://$USER_HOME$/algs4/checkstyle-6.1/contrib/examples/checks" />
+      <root url="file://$USER_HOME$/algs4/checkstyle-6.1/contrib/examples/filters" />
+      <root url="file://$USER_HOME$/algs4/checkstyle-6.1/contrib/examples/listeners" />
+      <root url="file://$USER_HOME$/algs4/checkstyle-6.1/contrib/usage/src/checkstyle" />
+      <root url="file://$USER_HOME$/algs4/checkstyle-6.1/contrib/usage/src/testinputs" />
+      <root url="file://$USER_HOME$/algs4/checkstyle-6.1/contrib/usage/src/tests" />
+      <root url="file://$USER_HOME$/algs4/hello" />
+      <root url="file://$USER_HOME$/algs4" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/algs4" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/algs4" recursive="false" type="SOURCES" />
+  </library>
+</component>
