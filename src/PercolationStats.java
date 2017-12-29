@@ -9,17 +9,20 @@
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.StdStats;
 public class PercolationStats {
-
-    private double[] results = null; // holds the fraction of open site on each run for all trials
     private static final double ciRatio = 1.96; // holds the confidence interval ration for 95%
+    private double mean, stddev; // holds mean and standard deviation for the simulation run
+    private int trials; // number of trials the test runs
     /**
      * constructor method: it will instantiate a Percolation object and run trial to get the opensite fraction when percolate
      * @param n: number of sites on each dimension
      * @param trials: number of trials the simulation should run
      */
     public PercolationStats(int n, int trials) {
-
-        results = new double[trials];
+        if (n <= 0 || trials <= 0) {
+            throw new IllegalArgumentException();
+        }
+        double []results = new double[trials];
+        this.trials = trials;
         for (int i = 0; i < trials; ++i) {
             Percolation perc = new Percolation(n);
             while (!perc.percolates()) {
@@ -29,6 +32,8 @@ public class PercolationStats {
             }
             results[i] = perc.numberOfOpenSites() / (n * n + 0.0);
         }
+        mean = StdStats.mean(results);
+        stddev = StdStats.stddev(results);
     }
 
 
@@ -37,7 +42,7 @@ public class PercolationStats {
      * @return (double), mean value of all trial results
      */
     public double mean() {
-        return StdStats.mean(results);
+        return mean;
     }
 
     /**
@@ -45,7 +50,7 @@ public class PercolationStats {
      * @return (double), standard deviation for all trials
      */
     public double stddev() {
-        return StdStats.stddev(results);
+        return stddev;
     }
 
     /**
@@ -53,7 +58,7 @@ public class PercolationStats {
      * @return (double), confidence interval lower
      */
     public double confidenceLo() {
-        return mean() - ciRatio * stddev() / Math.sqrt(results.length);
+        return mean - ciRatio * stddev / Math.sqrt(trials);
     }
 
 
@@ -62,7 +67,7 @@ public class PercolationStats {
      * @return (double), confidence interval upper
      */
     public double confidenceHi() {
-        return mean() + ciRatio * stddev() / Math.sqrt(results.length);
+        return mean + ciRatio * stddev / Math.sqrt(trials);
     }
 
     public static void main(String[] args) {
